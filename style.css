@@ -127,20 +127,19 @@ section + section { margin-top: 34px; }
   place-items: center;
   position: relative;
   min-width: 0;
-  padding: 16% 9% 6%;
+  padding: 0 9%;
   border-radius: 12px;
-  background: var(--window) center / 100% 100% no-repeat;
+  background: var(--card-art) center / 100% 100% no-repeat;
   text-align: center;
   text-decoration: none;
 }
 .lesson-link {
-  --window: url("assets/retro-lavender-window.svg");
+  --card-art: url("assets/retro-lesson-window.svg");
   height: 100%;
-  min-height: max(132px, 62cqw);
+  min-height: 132px;
+  aspect-ratio: 1121 / 521;
+  padding-block: max(30px, 11%) 5%;
 }
-.lesson-list li:nth-child(2) .lesson-link { --window: url("assets/retro-green-browser.svg"); }
-.lesson-list li:nth-child(3) .lesson-link { --window: url("assets/retro-pink-window.svg"); }
-.lesson-list li:nth-child(4) .lesson-link { --window: url("assets/retro-yellow-window.svg"); }
 .lesson-link:hover, .practice-link:hover { filter: drop-shadow(3px 4px 0 #382f4055); }
 .lesson-label { width: 100%; }
 .lesson-number { display: block; font-size: .86rem; }
@@ -159,15 +158,13 @@ section + section { margin-top: 34px; }
 .lesson-link [lang="ja"] { display: block; margin-top: .42em; font-size: clamp(.75rem, 4.4cqw, 1.1rem); }
 .practice-list { grid-template-columns: repeat(auto-fit, minmax(min(235px, 100%), 1fr)); }
 .practice-link {
-  --window: url("assets/retro-yellow-window.svg");
-  min-height: 110px;
-  height: 100%;
-  padding: 26px 12px 9px;
+  --card-art: url("assets/retro-practice-folder.svg");
+  min-height: 120px;
+  aspect-ratio: 492 / 384;
+  padding-block: 17% 8%;
   font-weight: 900;
 }
 .practice-link .title-line { justify-content: center; }
-.practice-list li:nth-child(2) .practice-link { --window: url("assets/retro-lavender-window.svg"); }
-.practice-list li:nth-child(3) .practice-link { --window: url("assets/retro-pink-window.svg"); }
 .title-line { display: flex; flex-wrap: wrap; align-items: center; column-gap: 10px; row-gap: 4px; }
 .doodles { display: inline-flex; gap: 5px; align-items: center; vertical-align: middle; }
 .doodles img { width: 27px; height: 30px; object-fit: contain; }
