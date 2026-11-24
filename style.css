@@ -14,7 +14,7 @@ body {
   padding: clamp(10px, 4vw, 56px);
   background: #fff url("assets/blue-wave-pattern.webp") top center / 126px auto repeat;
   color: var(--ink);
-  font: 16px/1.6 Nunito, system-ui, sans-serif;
+  font: 1.125rem/1.55 "Patrick Hand", "Yomogi", system-ui, sans-serif;
 }
 a { color: inherit; }
 a:focus-visible, summary:focus-visible { outline: 3px solid #6c436e; outline-offset: 4px; }
@@ -199,7 +199,12 @@ th { font-weight: 900; }
 summary { cursor: pointer; font-weight: 900; }
 .example { margin: 0 0 12px; }
 .example span { display: block; }
-.example [lang="ja"] { font-size: 1.15rem; }
+[lang="ja"] { font-family: "Yomogi", sans-serif; }
+.example [lang="ja"] { font-size: 1.25rem; }
+.example span:nth-child(3), tbody td:nth-child(3) {
+  font-family: "Embolism Spark", "Patrick Hand", sans-serif;
+  font-size: 1.2rem;
+}
 footer { text-align: center; padding-bottom: 20px; }
 .footer-rainbow { display: block; margin: 0 auto 8px; }
 .credit { margin: 4px 0 0; font-size: .85rem; }
