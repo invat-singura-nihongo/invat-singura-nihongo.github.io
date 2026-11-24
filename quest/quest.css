@@ -1,0 +1,56 @@
+.quest {
+  --ink: #322b20;
+  --muted: #584c39;
+  --moss: #394426;
+  --paper: #ead7b2;
+  --cream: #ceb58a;
+  --line: #8b7355;
+  background: #454537 radial-gradient(#62634d 1px, transparent 1px) 0 0 / 18px 18px;
+}
+.quest .book {
+  background-image: radial-gradient(ellipse at center,#f4e4c4,transparent 74%), repeating-linear-gradient(4deg,#52331908 0 1px,transparent 1px 5px);
+  border: 2px solid #524435;
+  box-shadow: 0 6px #a48b62, 0 10px #352d26, 0 16px 28px #201b1799;
+}
+.quest .masthead { background: #e4cda5; }
+.template-links { display:flex; align-items:center; flex-wrap:wrap; gap: 4px 12px; font-size: 1rem; }
+.template-links a { text-underline-offset: 3px; }
+.template-links [aria-current] { font-weight: bold; text-decoration-thickness: 2px; }
+.quest .tabs a { border: 1px solid #5f523f; border-bottom: 0; background: #dfc399; font-weight: bold; }
+.quest .tabs a:first-child { background: #b9c18d; }
+.quest .tabs a:nth-child(2) { background: #c9b8cf; }
+.quest-intro { padding: 21px clamp(18px,5vw,54px) 16px; border-bottom: 1px solid var(--line); }
+.quest-intro h1 { margin: 0; color: var(--moss); font: bold clamp(2rem,5vw,3.8rem)/1.1 var(--heading); }
+.quest-intro p { margin: 8px 0 0; }
+.quest .index-content { padding-top: 25px; }
+.quest .lessons { background: #e8d5af; }
+.quest .lessons li + li { border-color: #9b8668; }
+.quest .entry:hover { background: #d3d9a8; }
+.quest .entry { padding-block: 16px; }
+.quest .tools { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.quest .tool-link {
+  flex-direction: column-reverse;
+  justify-content: start;
+  text-align:center;
+  height:100%;
+  padding: 9px 4px;
+  border-color: #877459;
+  background: #eddcba;
+}
+.quest .tool-link > span:first-child { flex: none; }
+.quest .tool-link .doodles {
+  width: min(100%, 70px);
+  height: 62px;
+  justify-content: center;
+  border: 1px solid #3e432b;
+  border-radius: 10px;
+  background: #565f3a;
+}
+.quest .tools li:nth-child(2) .doodles { background: #60506d; }
+.quest .tools li:nth-child(3) .doodles { background: #77524b; }
+.quest .tool-link img { width: min(31%, 25px); height: 29px; }
+.quest .tool-link img:only-child { width: 31px; height: 36px; }
+.quest .about { padding: 15px; border: 1px solid var(--line); border-radius: 8px; background: #f1e0be; }
+.quest .content-page .panel, .quest footer { background: #f2e3c6; }
+@media (min-width: 671px) { .quest .index-content > div { border-left: 1px solid var(--line); padding-left: clamp(14px,3vw,34px); } }
+@media (max-width: 350px) { .quest .tools { grid-template-columns: 1fr; } }
