@@ -198,10 +198,10 @@ th, td { padding: 9px 6px; text-align: left; vertical-align: top; border-bottom:
 th { font-weight: 900; }
 summary { cursor: pointer; font-weight: 900; }
 .example { margin: 0 0 12px; }
-.example span { display: block; }
+.example > span { display: block; }
 [lang="ja"] { font-family: "Yomogi", sans-serif; }
 .example [lang="ja"] { font-size: 1.25rem; }
-.example span:nth-child(3), tbody td:nth-child(3) {
+.example > span:nth-child(3), tbody td:nth-child(3) {
   font-family: "Embolism Spark", "Patrick Hand", sans-serif;
   font-size: 1.2rem;
 }
@@ -220,4 +220,6 @@ footer { text-align: center; padding-bottom: 20px; }
 .practice-page h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); }
 .practice-page table { overflow-wrap: anywhere; }
 .practice-page .example [lang="ja"] { font-size: 1.15em; }
-.practice-page .example span:nth-child(3), .practice-page tbody td:nth-child(3) { font-size: 1.12em; }
+.practice-page .example > span:nth-child(3), .practice-page tbody td:nth-child(3) { font-size: 1.12em; }
+
+.diacritic { font-weight: 900; }
