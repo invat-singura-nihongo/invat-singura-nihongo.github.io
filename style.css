@@ -126,12 +126,12 @@ section + section { margin-top: 34px; }
 }
 .lesson-list li:first-child .lesson-link { translate: clamp(4px, 1.2cqw, 6px) 0; }
 .lesson-list li:nth-child(3) .lesson-link {
-  padding: 0 9% 0 53%;
-  background-image: url("assets/open-notebook.webp");
+  padding: 30% 14% 13% 12%;
+  background-image: url("assets/smiley-paperclip-note.svg");
   background-size: contain;
 }
 .lesson-list li:nth-child(3) .lesson-title {
-  font-size: clamp(.875rem, 8cqw, 2rem);
+  font-size: clamp(.875rem, 11cqw, 2.8rem);
 }
 .lesson-list li:nth-child(2) .lesson-link { background-image: url("assets/teal-sticky-note.webp"); }
 .lesson-list li:nth-child(4) .lesson-link {
