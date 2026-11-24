@@ -124,6 +124,15 @@ section + section { margin-top: 34px; }
   text-decoration: none;
   border-radius: 12px;
 }
+.lesson-list li:first-child .lesson-link { translate: clamp(4px, 1.2cqw, 6px) 0; }
+.lesson-list li:nth-child(3) .lesson-link {
+  padding: 0 9% 0 53%;
+  background-image: url("assets/open-notebook.webp");
+  background-size: contain;
+}
+.lesson-list li:nth-child(3) .lesson-title {
+  font-size: clamp(.875rem, 8cqw, 2rem);
+}
 .lesson-list li:nth-child(2) .lesson-link { background-image: url("assets/teal-sticky-note.webp"); }
 .lesson-list li:nth-child(4) .lesson-link {
   padding-top: 31%;
