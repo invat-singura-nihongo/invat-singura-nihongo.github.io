@@ -12,9 +12,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   padding: clamp(10px, 4vw, 56px);
-  background: #ffc9c2;
-  background-image: linear-gradient(90deg, #fff3 1px, transparent 1px), linear-gradient(#fff3 1px, transparent 1px);
-  background-size: 32px 32px;
+  background: #fff url("assets/blue-wave-pattern.webp") top center / 126px auto repeat;
   color: var(--ink);
   font: 16px/1.6 Nunito, system-ui, sans-serif;
 }
