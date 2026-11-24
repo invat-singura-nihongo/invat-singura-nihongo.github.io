@@ -30,23 +30,6 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #6c436e; outline-off
 header, main, footer { padding-inline: clamp(14px, 5vw, 65px); }
 header { padding-top: clamp(14px, 3vw, 32px); }
 .brand { font-weight: 900; text-decoration: none; }
-.site-banner {
-  display: grid;
-  place-items: center;
-  position: relative;
-  isolation: isolate;
-  aspect-ratio: 2.36;
-}
-.site-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
-.banner-links {
-  display: grid;
-  justify-items: center;
-  gap: clamp(5px, 1vw, 12px);
-  padding: 7px 12px;
-  transform: translateY(12%);
-  text-align: center;
-}
-.banner-links .brand { font-size: clamp(14px, 3.3vw, 30px); }
 nav { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(4px, 1.3vw, 14px); }
 nav a {
   border: 1px solid var(--outline);
@@ -63,8 +46,17 @@ h1 { font-size: clamp(29px, 5vw, 58px); line-height: 1.12; font-weight: 900; mar
 h2 { font-size: clamp(21px, 3.2vw, 28px); line-height: 1.25; font-weight: 900; margin: 0 0 16px; }
 ul, ol { padding-inline-start: 1.5rem; }
 section + section { margin-top: 34px; }
-.hero { overflow: hidden; text-align: center; border: 2px solid var(--outline); border-radius: 12px; box-shadow: 4px 4px #e8b1a6; }
-.welcome { padding: clamp(16px, 4vw, 38px) 12px 10px; }
+.hero { overflow: hidden; text-align: center; border: 2px solid var(--outline); border-radius: 12px; box-shadow: 4px 4px #e8b1a6;
+  background: #fff18a url("assets/hero-landscape.webp") center 54% / cover no-repeat;
+}
+.welcome {
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  margin: clamp(14px, 4vw, 42px) auto 8px;
+  padding: clamp(12px, 3vw, 30px);
+  border-radius: 15px;
+  background: #fff9edf0;
+}
 .tag, .lesson-number { font-weight: 900; letter-spacing: .04em; }
 .tag { font-size: .81rem; }
 .btn { display: inline-block; padding: 8px 14px; border: 2px solid var(--outline); border-radius: 10px; margin: 4px; box-shadow: 2px 3px var(--outline); background: var(--peach); text-decoration: none; font-weight: 900; }
@@ -90,13 +82,20 @@ section + section { margin-top: 34px; }
 }
 .lesson-list li { container-type: inline-size; }
 .lesson-link {
-  display: block;
-  aspect-ratio: 101.1112 / 66.2964;
-  padding: 17% 9% 7%;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  padding: 24% 13% 11%;
   line-height: 1.15;
-  background: url("assets/folder-01.svg") center / 100% 100% no-repeat;
+  background: url("assets/blue-notepaper-with-tape.webp") center / 100% 100% no-repeat;
+  text-align: center;
   text-decoration: none;
   border-radius: 12px;
+}
+.lesson-list li:nth-child(2) .lesson-link { background-image: url("assets/teal-sticky-note.webp"); }
+.lesson-list li:nth-child(4) .lesson-link {
+  padding-top: 33%;
+  background-image: url("assets/notepaper-with-binder-clip.webp");
 }
 .lesson-link:hover { filter: drop-shadow(3px 4px 0 #e8b1a6); }
 .lesson-link .lesson-number {
@@ -141,7 +140,5 @@ footer { text-align: center; padding-bottom: 20px; }
 @media (max-width: 450px) {
   body { padding-inline: 7px; }
   header, main, footer { padding-inline: 12px; }
-  .site-banner { aspect-ratio: 2.08; }
-  .site-banner > img { object-fit: fill; }
   nav a { font-size: .86rem; }
 }
