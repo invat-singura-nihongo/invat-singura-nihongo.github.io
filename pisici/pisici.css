@@ -57,3 +57,47 @@
 .cats .entry img, .cats .doodles { filter:grayscale(1); }
 .cats .entry:hover { background:#e1dbce; }
 .cats .lessons, .cats .tool-link, .cats .tools li a, .cats footer, .cats .content-page .panel { background:#ede8dd; border-color:var(--line); }
+
+.cats.reference-home .book { width: min(calc(100% - 36px), 1080px); border: 0; border-radius: 0; box-shadow: none; padding-inline: clamp(0px, 3vw, 26px); }
+.cat-intro {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, .55fr);
+  gap: clamp(16px,6vw,65px);
+  align-items: center;
+  padding: clamp(24px,6vw,70px) clamp(8px,2vw,25px) clamp(14px,3vw,32px);
+}
+.cat-intro h1 { margin: 0; color: var(--ink); font: bold clamp(2.3rem,7vw,5rem)/1 var(--heading); letter-spacing: -.05em; }
+.cat-concept h2 { margin-bottom: 7px; font: bold .89rem/1.25 system-ui,sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.cat-concept p { margin: 0 0 12px; }
+.cat-concept .button { border-radius: 100px; padding: 5px 15px; box-shadow: none; }
+.cats.reference-home .cat-scene { aspect-ratio: 2.15; border-width: clamp(6px,1.7vw,17px); }
+.cats.reference-home .cat-scene img { width: 22%; height: 51%; left: 33%; top: 23%; }
+.city.distant { height: 62%; bottom: 7%; opacity: .35; translate: 9% 0; }
+.city.distant::after { display: none; }
+.cats.reference-home .index-content {
+  grid-template-columns: minmax(0,1.26fr) minmax(0,1fr) minmax(0,.8fr);
+  gap: 0;
+  padding: clamp(17px, 4vw, 38px) 0;
+}
+.cats.reference-home .index-content > section { padding-inline: clamp(8px,2vw,23px); }
+.cats.reference-home .index-content > section + section { border-left: 1px solid var(--line); }
+.cats.reference-home .index-content h2 { margin-bottom: 12px; font: bold .92rem/1.3 system-ui,sans-serif; text-transform: uppercase; letter-spacing: .1em; }
+.cats.reference-home .index-content h2::after { display: none; }
+.cats.reference-home .entry { padding: 7px 4px; grid-template-columns: 34px minmax(0,1fr); gap: 7px; }
+.cats.reference-home .entry img { width: 34px; height: 33px; }
+.cats.reference-home .entry .lesson-title { font-size: .98rem; }
+.cats.reference-home .lessons, .cats.reference-home .tool-link { background: transparent; border: 0; border-radius: 0; }
+.cats.reference-home .tool-link { border-bottom: 1px dashed var(--line); font-size: .99rem; padding: 7px 0; min-height: 46px; }
+.cats.reference-home .doodles img { width: 20px; height: 22px; }
+.cats.reference-home .about { margin-top: 0; }
+.cat-stamps { display: flex; gap: 8px; justify-content: center; margin-top: 14px; filter: grayscale(1); }
+.cat-stamps img { width: min(46%,74px); height: 49px; object-fit: contain; }
+@media (max-width: 660px) {
+  .cats.reference-home .index-content { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .cats.reference-home .index-content .about { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; }
+}
+@media (max-width: 400px) {
+  .cat-intro { grid-template-columns: minmax(0,1fr); }
+  .cats.reference-home .index-content { grid-template-columns: minmax(0,1fr); }
+  .cats.reference-home .index-content > section + section { border-left: 0; border-top: 1px solid var(--line); margin-top: 14px; padding-top: 14px; }
+}
