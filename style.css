@@ -140,6 +140,9 @@ section + section { margin-top: 34px; }
   aspect-ratio: 1121 / 521;
   padding-block: max(30px, 11%) 5%;
 }
+.lesson-list li:nth-child(odd) .lesson-link {
+  --card-art: url("assets/retro-lavender-window.svg");
+}
 .lesson-link:hover, .practice-link:hover { filter: drop-shadow(3px 4px 0 #382f4055); }
 .lesson-label { width: 100%; }
 .lesson-number { display: block; font-size: .86rem; }
