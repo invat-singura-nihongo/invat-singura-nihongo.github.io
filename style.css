@@ -14,7 +14,7 @@ body {
   padding: clamp(10px, 4vw, 56px);
   background: #fff url("assets/blue-wave-pattern.webp") top center / 126px auto repeat;
   color: var(--ink);
-  font: 1.125rem/1.55 "Patrick Hand", "Yomogi", system-ui, sans-serif;
+  font: 1.125rem/1.55 "Mochibop", "Patrick Hand", "Yomogi", system-ui, sans-serif;
 }
 a { color: inherit; }
 a:focus-visible, summary:focus-visible { outline: 3px solid #6c436e; outline-offset: 4px; }
