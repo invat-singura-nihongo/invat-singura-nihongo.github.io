@@ -83,6 +83,8 @@ section + section { margin-top: 34px; }
   height: clamp(55px, 9vw, 106px);
   object-fit: contain;
   transform: rotate(var(--tilt));
+  filter: drop-shadow(1.5px 0 #fff) drop-shadow(-1.5px 0 #fff)
+          drop-shadow(0 1.5px #fff) drop-shadow(0 -1.5px #fff);
 }
 .japan-illustrations img:nth-child(odd) { --tilt: -7deg; }
 .japan-illustrations img:nth-child(even) { --tilt: 6deg; }
@@ -117,7 +119,7 @@ section + section { margin-top: 34px; }
   display: grid;
   place-items: center;
   aspect-ratio: 1 / 1;
-  padding: 24% 13% 11%;
+  padding: 23% 11% 12%;
   line-height: 1.15;
   background: url("assets/blue-notepaper-with-tape.webp") center / 100% 100% no-repeat;
   text-align: center;
@@ -126,7 +128,7 @@ section + section { margin-top: 34px; }
 }
 .lesson-list li:nth-child(2) .lesson-link { background-image: url("assets/teal-sticky-note.webp"); }
 .lesson-list li:nth-child(4) .lesson-link {
-  padding-top: 33%;
+  padding-top: 31%;
   background-image: url("assets/notepaper-with-binder-clip.webp");
 }
 .lesson-link:hover { filter: drop-shadow(3px 4px 0 #e8b1a6); }
@@ -137,7 +139,15 @@ section + section { margin-top: 34px; }
 }
 .practice-link:hover { box-shadow: 4px 5px #d49b8e; }
 .lesson-number { display: block; font-size: .86rem; }
-.lesson-title { display: block; font-weight: 900; font-size: clamp(.8125rem, 4.6cqw, 1.12rem); }
+.lesson-label { width: 100%; text-align: center; }
+.lesson-title {
+  display: block;
+  font-weight: 900;
+  font-size: clamp(1.125rem, 13.8cqw, 3.36rem);
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.lesson-link .lesson-title + [lang="ja"] { margin-top: .45em; }
 .lesson-link [lang="ja"] { display: block; font-size: clamp(.75rem, 4.3cqw, 1rem); }
 .practice-list { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
 .practice-link {
