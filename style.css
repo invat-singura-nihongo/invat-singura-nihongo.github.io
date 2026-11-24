@@ -83,25 +83,31 @@ section + section { margin-top: 34px; }
   box-shadow: 3px 3px #e8b1a6;
   text-decoration: none;
 }
-.lesson-list { gap: 16px; }
-.lesson-list li { width: min(100%, 420px); }
+.lesson-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(8px, 2vw, 16px);
+  max-width: 856px;
+}
+.lesson-list li { container-type: inline-size; }
 .lesson-link {
   display: block;
   aspect-ratio: 101.1112 / 66.2964;
-  padding: clamp(42px, 6vw, 65px) 9% 8%;
+  padding: 17% 9% 7%;
+  line-height: 1.15;
   background: url("assets/folder-01.svg") center / 100% 100% no-repeat;
   text-decoration: none;
   border-radius: 12px;
 }
 .lesson-link:hover { filter: drop-shadow(3px 4px 0 #e8b1a6); }
 .lesson-link .lesson-number {
-  margin-bottom: 6px;
-  font-size: clamp(1.125rem, 3vw, 1.65rem);
+  margin-bottom: clamp(3px, 1.4cqw, 6px);
+  font-size: clamp(.875rem, 6.3cqw, 1.65rem);
   text-transform: uppercase;
 }
 .practice-link:hover { box-shadow: 4px 5px #d49b8e; }
 .lesson-number { display: block; font-size: .86rem; }
-.lesson-title { display: block; font-weight: 900; font-size: 1.12rem; }
+.lesson-title { display: block; font-weight: 900; font-size: clamp(.8125rem, 4.6cqw, 1.12rem); }
+.lesson-link [lang="ja"] { display: block; font-size: clamp(.75rem, 4.3cqw, 1rem); }
 .practice-list { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
 .practice-link {
   align-items: flex-start;
