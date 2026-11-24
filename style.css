@@ -54,15 +54,47 @@ section + section { margin-top: 34px; }
   max-width: calc(100% - 24px);
   margin: clamp(14px, 4vw, 42px) auto 8px;
   padding: clamp(12px, 3vw, 30px);
-  border-radius: 15px;
-  background: #fff9edf0;
+  background: transparent;
 }
+.welcome .tag, .welcome h1, .welcome p {
+  color: #493025;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 2.5px #fff;
+  text-shadow: 1px 1px #fff, -1px 1px #fff, 1px -1px #fff, -1px -1px #fff;
+}
+.welcome h1 { -webkit-text-stroke-width: 4px; }
+.welcome p { font-weight: 800; }
 .tag, .lesson-number { font-weight: 900; letter-spacing: .04em; }
 .tag { font-size: .81rem; }
 .btn { display: inline-block; padding: 8px 14px; border: 2px solid var(--outline); border-radius: 10px; margin: 4px; box-shadow: 2px 3px var(--outline); background: var(--peach); text-decoration: none; font-weight: 900; }
 .btn.secondary { background: var(--paper); }
-.cats { display: flex; align-items: end; justify-content: center; gap: clamp(3px, 2vw, 22px); padding: 12px 10px 4px; }
-.cats img { display: block; width: min(17%, 136px); height: clamp(40px, 13vw, 115px); object-fit: contain; object-position: bottom; }
+.japan-illustrations {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  align-items: end;
+  gap: clamp(5px, 1.2vw, 14px);
+  max-width: 940px;
+  margin-inline: auto;
+  padding: 10px clamp(12px, 3vw, 28px) 16px;
+}
+.japan-illustrations img {
+  display: block;
+  width: 100%;
+  height: clamp(55px, 9vw, 106px);
+  object-fit: contain;
+  transform: rotate(var(--tilt));
+}
+.japan-illustrations img:nth-child(odd) { --tilt: -7deg; }
+.japan-illustrations img:nth-child(even) { --tilt: 6deg; }
+.japan-illustrations img:nth-child(3n) { --tilt: 10deg; }
+.japan-illustrations img:last-child { --tilt: -4deg; }
+@media (max-width: 600px) {
+  .japan-illustrations {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 410px;
+    row-gap: 12px;
+  }
+}
 .lesson-list, .practice-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .practice-link {
   display: flex;
