@@ -131,7 +131,7 @@ section + section { margin-top: 34px; }
   background-size: contain;
 }
 .lesson-list li:nth-child(3) .lesson-title {
-  font-size: clamp(.875rem, 11cqw, 2.8rem);
+  font-size: clamp(1rem, 12cqw, 3.05rem);
 }
 .lesson-list li:nth-child(2) .lesson-link { background-image: url("assets/teal-sticky-note.webp"); }
 .lesson-list li:nth-child(4) .lesson-link {
@@ -141,7 +141,7 @@ section + section { margin-top: 34px; }
 .lesson-link:hover { filter: drop-shadow(3px 4px 0 #e8b1a6); }
 .lesson-link .lesson-number {
   margin-bottom: clamp(3px, 1.4cqw, 6px);
-  font-size: clamp(.875rem, 6.3cqw, 1.65rem);
+  font-size: clamp(.95rem, 7cqw, 1.8rem);
   text-transform: uppercase;
 }
 .practice-link:hover { box-shadow: 4px 5px #d49b8e; }
@@ -150,12 +150,12 @@ section + section { margin-top: 34px; }
 .lesson-title {
   display: block;
   font-weight: 900;
-  font-size: clamp(1.125rem, 13.8cqw, 3.36rem);
+  font-size: clamp(1.2rem, 15cqw, 3.65rem);
   line-height: 1.04;
   text-wrap: balance;
 }
 .lesson-link .lesson-title + [lang="ja"] { margin-top: .45em; }
-.lesson-link [lang="ja"] { display: block; font-size: clamp(.75rem, 4.3cqw, 1rem); }
+.lesson-link [lang="ja"] { display: block; font-size: clamp(.82rem, 4.7cqw, 1.1rem); }
 .practice-list { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
 .practice-link {
   align-items: flex-start;
