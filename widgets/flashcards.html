@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fișe de japoneză · Jurnal Nihongo</title>
+<meta name="description" content="Repetă 6 cuvinte în japoneză cu fișe interactive, romaji și traduceri în română.">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #efe8d9; color: #35392c; font: 1rem/1.5 system-ui, sans-serif; }
+  main { width: min(100%, 31rem); margin: 0 auto; padding: clamp(12px, 4vw, 24px); }
+  h1 { margin: 0; font: bold clamp(1.4rem, 6vw, 1.9rem)/1.2 Georgia, serif; }
+  .deck { padding: clamp(12px, 4vw, 24px); border: 1px solid #c5ad8d; border-radius: 20px; background: #fffaf0; box-shadow: 0 4px #d6c3a9; }
+  header, nav { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  #progress { color: #5b604b; font-variant-numeric: tabular-nums; }
+  button { font: inherit; cursor: pointer; }
+  button:focus-visible { outline: 3px solid #a3372b; outline-offset: 3px; }
+  #card { width: 100%; min-height: 10.5rem; margin: 14px 0 10px; padding: 12px; border: 1px solid #a6ad8b; border-radius: 14px; background: #e9eddc; color: #27371f; text-align: center; }
+  #card[aria-pressed="true"] { background: #f9e8d8; border-color: #caac93; color: #4a3326; }
+  #word, #reading, #hint { display: block; }
+  #word { font-size: clamp(1.7rem, 9vw, 2.45rem); font-weight: 650; overflow-wrap: anywhere; }
+  #reading { min-height: 1.5rem; }
+  #hint { margin-top: 6px; font-size: .82rem; }
+  nav button { min-height: 44px; padding: 6px 12px; border: 1px solid #b2aa93; border-radius: 10px; background: #fffaf0; color: #35392c; }
+  nav button:last-child { background: #43553b; border-color: #43553b; color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <section class="deck" aria-labelledby="title">
+    <header><h1 id="title">Fișe de japoneză</h1><span id="progress" aria-live="polite"></span></header>
+    <button id="card" type="button" aria-label="Arată cealaltă față a fișei" aria-pressed="false">
+      <span id="word" lang="ja"></span>
+      <span id="reading"></span>
+      <span id="hint">Apasă pentru traducere</span>
+    </button>
+    <nav aria-label="Navigare între fișe">
+      <button id="previous" type="button">← Înapoi</button>
+      <button id="next" type="button">Înainte →</button>
+    </nav>
+    <noscript>Activează JavaScript pentru a folosi fișele.</noscript>
+  </section>
+</main>
+<script>
+  const words = [
+    { japanese: 'ねこ', romaji: 'neko', romanian: 'pisică' },
+    { japanese: 'ほん', romaji: 'hon', romanian: 'carte' },
+    { japanese: 'みず', romaji: 'mizu', romanian: 'apă' },
+    { japanese: 'ともだち', romaji: 'tomodachi', romanian: 'prieten / prietenă' },
+    { japanese: 'かぞく', romaji: 'kazoku', romanian: 'familie' },
+    { japanese: 'コーヒー', romaji: 'kōhī', romanian: 'cafea' }
+  ];
+  const card = document.getElementById('card');
+  const word = document.getElementById('word');
+  const reading = document.getElementById('reading');
+  const hint = document.getElementById('hint');
+  const progress = document.getElementById('progress');
+  let index = 0;
+  let revealed = false;
+
+  function render() {
+    const entry = words[index];
+    card.setAttribute('aria-pressed', String(revealed));
+    card.setAttribute('aria-describedby', 'word reading');
+    word.lang = revealed ? 'ro' : 'ja';
+    word.textContent = revealed ? entry.romanian : entry.japanese;
+    reading.lang = 'ja-Latn';
+    reading.textContent = revealed ? entry.romaji : '';
+    hint.textContent = revealed ? 'Apasă pentru japoneză' : 'Apasă pentru traducere';
+    progress.textContent = (index + 1) + ' / ' + words.length;
+  }
+
+  function move(step) {
+    index = (index + step + words.length) % words.length;
+    revealed = false;
+    render();
+  }
+
+  card.addEventListener('click', () => {
+    revealed = !revealed;
+    render();
+  });
+  document.getElementById('previous').addEventListener('click', () => move(-1));
+  document.getElementById('next').addEventListener('click', () => move(1));
+  render();
+</script>
+</body>
+</html>
