@@ -5,7 +5,7 @@
   --paper: #ead7b2;
   --cream: #ceb58a;
   --line: #8b7355;
-  background: #454537 radial-gradient(#62634d 1px, transparent 1px) 0 0 / 18px 18px;
+  background: #103549 url("../assets/japanese-title-pattern.webp") center top / 620px auto repeat;
 }
 .quest .book {
   background-image: radial-gradient(ellipse at center,#f4e4c4,transparent 74%), repeating-linear-gradient(4deg,#52331908 0 1px,transparent 1px 5px);
@@ -62,7 +62,7 @@ body.cozy-home {
   --moss: #465936;
   --paper: #fff8e6;
   --line: #c5ac87;
-  background: #e8dcc0;
+  background: #103549 url("../assets/japanese-title-pattern.webp") center top / 620px auto repeat;
 }
 .cozy-main { max-width: 1220px; margin: clamp(0px, 2.5vw, 36px) auto 0; }
 .game-screen {
@@ -74,8 +74,7 @@ body.cozy-home {
   min-height: clamp(520px, 59vw, 680px);
   border: 1px solid #aa956f;
   border-radius: clamp(0px, 2vw, 20px);
-  background: linear-gradient(#06233355, #06233333),
-    #103549 url("../assets/japanese-title-pattern.webp") center / clamp(560px, 72vw, 900px) auto repeat;
+  background: #163941 url("../assets/fuji-torii.webp") right bottom / cover no-repeat;
   box-shadow: inset 0 0 22px #95734f38;
 }
 .game-top {

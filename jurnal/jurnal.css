@@ -14,7 +14,7 @@ html { scroll-padding-top: 20px; }
 body {
   margin: 0;
   color: var(--ink);
-  background: #dadbc5 radial-gradient(#a9ae88 1px, transparent 1px) 0 0 / 22px 22px;
+  background: #103549 url("../assets/japanese-title-pattern.webp") center top / 620px auto repeat;
   font: 1.15rem/1.55 var(--body);
 }
 a { color: var(--moss); }
@@ -72,8 +72,7 @@ img { max-width: 100%; }
   align-items: center;
   gap: clamp(14px, 3vw, 32px);
   padding: clamp(28px, 5vw, 60px) clamp(20px, 6vw, 72px);
-  background: linear-gradient(90deg, #062333e8, #0623334d),
-    #103549 url("../assets/japanese-title-pattern.webp") center / clamp(520px, 68vw, 820px) auto repeat;
+  background: linear-gradient(90deg, #092d38e6, #092d3899 45%, transparent 72%), #163941 url("../assets/fuji-torii.webp") right bottom / cover no-repeat;
   border-bottom: 1px solid var(--line);
 }
 .hero h1, .content-page h1 {
@@ -199,7 +198,7 @@ footer {
 }
 footer p { margin: 2px 0 0; font-size: .9rem; }
 @media (max-width: 670px) {
-  .hero { grid-template-columns: 1fr; gap: 12px; }
+  .hero { grid-template-columns: 1fr; padding-bottom: clamp(100px, 30vw, 180px); }
   .hero-illustration { width: min(65%, 240px); }
   .index-content { grid-template-columns: 1fr; }
 }
