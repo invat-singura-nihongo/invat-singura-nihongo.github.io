@@ -72,7 +72,8 @@ img { max-width: 100%; }
   align-items: center;
   gap: clamp(14px, 3vw, 32px);
   padding: clamp(28px, 5vw, 60px) clamp(20px, 6vw, 72px);
-  background: radial-gradient(ellipse at 80% 72%, #ecedcf 0%, transparent 56%), #fcf4df;
+  background: linear-gradient(90deg, #062333e8, #0623334d),
+    #103549 url("../assets/japanese-title-pattern.webp") center / clamp(520px, 68vw, 820px) auto repeat;
   border-bottom: 1px solid var(--line);
 }
 .hero h1, .content-page h1 {
@@ -82,7 +83,8 @@ img { max-width: 100%; }
   letter-spacing: -.045em;
   text-wrap: balance;
 }
-.hero p { max-width: 36ch; margin: 0 0 18px; color: var(--muted); }
+.hero h1, .hero p { color: #fff8e7; text-shadow: 0 2px 4px #061e30; }
+.hero p { max-width: 36ch; margin: 0 0 18px; }
 .hero .level { margin: 0; font-size: 1rem; }
 .button {
   display: inline-block;

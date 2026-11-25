@@ -74,10 +74,8 @@ body.cozy-home {
   min-height: clamp(520px, 59vw, 680px);
   border: 1px solid #aa956f;
   border-radius: clamp(0px, 2vw, 20px);
-  background:
-    radial-gradient(ellipse at 50% 36%, #fff9e7 25%, #fff5dcee 60%, transparent 90%),
-    linear-gradient(90deg,#8396654d,transparent 9%, transparent 91%,#8396654d),
-    #f7edce;
+  background: linear-gradient(#06233355, #06233333),
+    #103549 url("../assets/japanese-title-pattern.webp") center / clamp(560px, 72vw, 900px) auto repeat;
   box-shadow: inset 0 0 22px #95734f38;
 }
 .game-top {
@@ -145,6 +143,7 @@ body.cozy-home {
   font: bold clamp(2.5rem, 6.4vw, 5.25rem)/.98 var(--body);
 }
 .game-center h1 span, .game-center h1 strong { display: block; }
+.game-center h1 span { color: #fff8e7; text-shadow: 0 2px 4px #061e30; }
 .game-center h1 strong {
   width: fit-content;
   margin: 8px auto 0;
@@ -229,10 +228,8 @@ body.cozy-home {
   border-top: 2px solid #bb8d62;
 }
 .desk img { position: absolute; object-fit: contain; }
-.desk-cat { width: 13%; left: 1%; bottom: 10%; rotate: -7deg; }
 .desk-book { width: 15%; right: 0; bottom: -17%; rotate: -15deg; }
 .desk-plant { width: 13%; left: -2%; bottom: 72%; rotate: -12deg; }
-.desk-cup { width: 11%; right: 3%; bottom: 45%; rotate: 7deg; }
 .game-dock {
   display: flex;
   justify-self: center;
